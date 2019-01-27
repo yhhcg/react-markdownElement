@@ -21,8 +21,8 @@
     "preversion": "yarn test",
     "version": "yarn build && npm publish build"
   },
-  "repository": "git@github.com:marcosun/react-markdownElement.git",
-  "author": "marcosun <marcoinbristol@gmail.com>",
+  "repository": "git@github.com:yhhcg/react-markdownElement.git",
+  "author": "yhhcg",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.0.0",
