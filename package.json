@@ -76,5 +76,12 @@
   "peerDependencies": {
     "react": "*",
     "react-dom": "*"
-  }
+  },
+  "keywords": [
+    "prismjs",
+    "react",
+    "marked",
+    "syntax highlighting",
+    "markdown"
+  ]
 }
