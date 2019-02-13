@@ -21,7 +21,10 @@
     "preversion": "yarn test",
     "version": "yarn build && npm publish build"
   },
-  "repository": "git@github.com:yhhcg/react-prism-marked.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yhhcg/react-prism-marked.git"
+  },
   "author": "yhhcg",
   "license": "MIT",
   "devDependencies": {
