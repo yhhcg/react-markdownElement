@@ -2,10 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import marked from 'marked';
-import prism from 'prismjs';
-import 'prismjs/components/prism-css';
-import 'prismjs/components/prism-javascript';
-import 'prismjs/components/prism-jsx';
+import { default as prism, lightTheme, setPrismTheme } from './prism';
+
+setPrismTheme(lightTheme);
 
 const markedOptions = {
   gfm: true,
@@ -52,3 +51,5 @@ MarkdownElement.propTypes = {
 };
 
 export default MarkdownElement;
+
+
