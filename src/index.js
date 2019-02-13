@@ -1,3 +1,3 @@
-import demo from './demo';
+import MarkdownElement from './MarkdownElement';
 
-export default demo;
+export default MarkdownElement;
