@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
-import demo from 'react-markdownElement';
+import demo from 'react-prism-marked';
 
 /**
  * Export a form call api with post method
