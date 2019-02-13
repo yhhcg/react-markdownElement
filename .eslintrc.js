@@ -5,15 +5,14 @@ module.exports = {
     es6: true,
     browser: true,
     node: true,
-    jest: true,
   },
-  extends: ['plugin:import/recommended', 'airbnb-base'],
+  extends: ['plugin:import/recommended', 'airbnb'],
   parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 7,
     sourceType: 'module',
   },
-  plugins: ['babel', 'import'],
+  plugins: ['babel', 'import', 'jsx-a11y'],
   rules: {
     'linebreak-style': 'off', // Don't play nicely with Windows
     'arrow-body-style': 'off', // Incompatible with prettier
@@ -51,6 +50,33 @@ module.exports = {
         'newlines-between': 'never',
       },
     ],
+
+    'react/jsx-indent': 'off', // Incompatible with prettier
+    'react/jsx-closing-bracket-location': 'off', // Incompatible with prettier
+    'react/jsx-wrap-multilines': 'off', // Incompatible with prettier
+    'react/jsx-indent-props': 'off', // Incompatible with prettier
+    'react/jsx-one-expression-per-line': 'off', // Incompatible with prettier
+    'react/jsx-handler-names': [
+      'error',
+      {
+        // airbnb is disabling this rule
+        eventHandlerPrefix: 'handle',
+        eventHandlerPropPrefix: 'on',
+      },
+    ],
+    'react/jsx-curly-brace-presence': 'off', // airbnb use error, it's buggy
+    'react/forbid-prop-types': 'off', // airbnb use error
+    'react/require-default-props': 'off', // airbnb use error, it's buggy
+    'react/destructuring-assignment': 'off', // airbnb use error
+    'react/jsx-filename-extension': ['error', { extensions: ['.js'] }], // airbnb is using .jsx
+    'react/no-danger': 'error', // airbnb is using warn
+    'react/no-direct-mutation-state': 'error', // airbnb is using off
+    'react/no-find-dom-node': 'off', // airbnb use error
+    'react/sort-prop-types': 'error', // airbnb use off
+
+    'jsx-a11y/label-has-associated-control': 'off',
+    'jsx-a11y/label-has-for': 'off',
+    'jsx-a11y/no-autofocus': 'off', // We are a library, people do what they want.
 
     'no-void': 'off',
   },
