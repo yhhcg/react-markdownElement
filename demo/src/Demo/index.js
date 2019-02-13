@@ -1,20 +1,27 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
-import demo from 'react-prism-marked';
+import PrismMarked from 'react-prism-marked';
 
-/**
- * Export a form call api with post method
- */
+const code = `
+\`\`\`jsx
+import React from 'react';
+
+class Demo extends React.PureComponent {
+  render() {
+    return 'demo';
+  }
+}
+
+export default Demo;
+\`\`\`
+`;
+
 @hot(module)
 class Demo extends React.Component {
-  text = demo();
-
-  /**
-   * Render Something.
-   * @return {Node}
-   */
   render() {
-    return <div>{this.text}</div>;
+    return (
+      <PrismMarked text={code} />
+    );
   }
 }
 
