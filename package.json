@@ -1,7 +1,7 @@
 {
   "name": "react-prism-marked",
   "version": "1.0.0-rc.1",
-  "description": "Start point for a javascript package",
+  "description": "React markdown binding",
   "main": "src/index.js",
   "scripts": {
     "prebuild": "rimraf build demo/node_modules/react-prism-marked",
