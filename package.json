@@ -1,6 +1,6 @@
 {
   "name": "react-prism-marked",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0-rc.2",
   "description": "React markdown binding",
   "main": "src/index.js",
   "scripts": {
@@ -19,7 +19,7 @@
     "test": "jest --passWithNoTests",
     "test:watch": "npm test -- --watch",
     "preversion": "yarn test",
-    "version": "yarn build && npm publish build"
+    "version": "yarn build && yarn publish build"
   },
   "repository": {
     "type": "git",
