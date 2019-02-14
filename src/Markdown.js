@@ -33,7 +33,7 @@ const markedOptions = {
   renderer: new marked.Renderer(),
 };
 
-function MarkdownElement(props) {
+function Markdown(props) {
   const { className, text, ...other } = props;
 
   return (
@@ -45,11 +45,11 @@ function MarkdownElement(props) {
   );
 }
 
-MarkdownElement.propTypes = {
+Markdown.propTypes = {
   className: PropTypes.string,
   text: PropTypes.string,
 };
 
-export default MarkdownElement;
+export default Markdown;
 
 
