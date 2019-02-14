@@ -18,7 +18,7 @@ class Demo extends React.Component {
     
     return (
       <Markdown
-        text={`## Props\n${propsTable}\n## Demo\n\`\`\`jsx\n${raw}\n\`\`\``}
+        text={`## Props\n${propsTable}\n## Demo Source\n\`\`\`jsx\n${raw}\n\`\`\``}
       />
     );
   }
