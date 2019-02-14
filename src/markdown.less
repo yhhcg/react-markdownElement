@@ -1,0 +1,230 @@
+@paper: #fff;
+
+@hint: rgba(0, 0, 0, 0.38);
+@primary: rgba(0, 0, 0, 0.87);
+@secondary: rgba(0, 0, 0, 0.54);
+@secondaryMain: rgb(225, 0, 80);
+
+.markdown-body {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  color: @primary;
+
+  .anchor-link {
+    /* Offset for the anchor. */
+    margin-top: -96px;
+    position: 'absolute',
+  }
+
+  pre, pre[class*="language-"] {
+    margin: 24px 0;
+    padding: 12px 18px;
+    background-color: @paper;
+    border-radius: 4px;
+    overflow: auto;
+    /* iOS momentum scrolling. */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  code {
+    display: inline-block;
+    line-height: 1.6;
+    font-family: Consolas, "Liberation Mono", Menlo, monospace;
+    padding: 3px 6px;
+    color: @primary;
+    background-color: @paper;
+    font-size: 14px;
+  }
+
+  p code, ul code, pre code {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  h1 {
+    color: @primary;
+    font-size: 3.75rem;
+    font-weight: 300;
+    letter-spacing: -0.00833em;
+    line-height: 1;
+    margin: 32px 0 16px;
+  }
+
+  .description {
+    color: @primary;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0em;
+    line-height: 1.33;
+    margin: 0 0 40px;
+  }
+  
+  h2 {
+    color: @primary;
+    font-size: 2.125rem;
+    font-weight: 400;
+    letter-spacing: 0.00735em;
+    line-height: 1.17;
+    margin: 32px 0 24px;
+  }
+
+  h3 {
+    color: @primary;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0em;
+    line-height: 1.33;
+    margin: 32px 0 24px;
+  }
+  
+  h4{
+    color: @primary;
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: 0.0075em;
+    line-height: 1.6;
+    margin: 24px 0 16px;
+  }
+
+  p, ul, ol {
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4 {
+    code {
+      font-size: inherit;
+      line-height: inherit;
+      /* Remove scroll on small screens. */
+      word-break: break-word;
+    }
+
+    .anchor-link-style {
+      opacity: 0;
+      /* To prevent the link to get the focus. */ 
+      display: none;
+    }
+
+    :hover .anchor-link-style {
+      display: inline-block;
+      opacity: 1;
+      padding: 0 8px;
+      color: @hint;
+
+      :hover {
+        color: @secondary;
+      }
+
+      svg {
+        width: 0.55em;
+        height: 0.55em;
+        fill: currentColor;
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; // iOS momentum scrolling.
+    border-collapse: collapse;
+    border-spacing: 0;
+    overflow: hidden;
+
+    .prop-name {
+      font-size: 13px;
+      font-family: Consolas, "Liberation Mono", Menlo, monospace;
+    }
+
+    .required {
+      color: #006500;
+    }
+
+    .prop-type {
+      font-size: 13px;
+      font-family: Consolas, "Liberation Mono", Menlo, monospace;
+      color: #932981;
+    }
+
+    .prop-default {
+      font-size: 13px;
+      font-family: Consolas, "Liberation Mono", Menlo, monospace;
+      border-bottom: 1px dotted @hint;
+    }
+  }
+
+  thead {
+    font-size: 14px;
+    font-weight: 500;
+    color: @secondary;
+  }
+
+  tbody {
+    font-size: 14px;
+    line-height: 1.5;
+    color: @primary;
+  }
+
+  td {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 8px 16px 8px 8px;
+    text-align: left;
+  }
+
+  td:last-child {
+    padding-right: 24px;
+  }
+
+  td compact{
+    padding-right: 24px;
+  }
+
+  td code {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  th {
+    white-space: pre;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    font-weight: 500;
+    padding: 0 16px 0 8px;
+    text-align: left;
+  }
+
+  th:last-child {
+    padding-right: 24px;
+  }
+
+  tr {
+    height: 48px;
+  }
+
+  thead tr {
+    height: 64px;
+  }
+
+  strong {
+    font-weight: 500;
+  }
+
+  blockquote {
+    border-left: 5px solid @hint;
+    background-color: @paper;
+    padding: 4px 24px;
+    margin: 24px 0;
+  }
+
+  a, a code {
+    /* Style taken from the Link component. */
+    color: @secondaryMain;
+    text-decoration: none;
+    :hover {
+      text-decoration: underline;
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
