@@ -1,6 +1,7 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
 import Markdown from 'react-prism-marked';
+import 'react-prism-marked/markdown.css';
 
 @hot(module)
 class Demo extends React.Component {
